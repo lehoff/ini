@@ -71,13 +71,13 @@ defmodule Ini do
   end
 
   defp section?(line) do
-    Regex.match?(section_regex, line)
+    Regex.match?(section_regex(), line)
   end
   defp array_assign?(line) do
-    Regex.match?(array_assign_regex, line)
+    Regex.match?(array_assign_regex(), line)
   end
   defp assign?(line) do
-    Regex.match?(assign_regex, line)
+    Regex.match?(assign_regex(), line)
   end
 
   defp section_regex() do
